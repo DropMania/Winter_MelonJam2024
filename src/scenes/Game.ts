@@ -19,7 +19,9 @@ export class Game extends Scene {
 	create() {
 		this.map = this.make.tilemap({ key: 'Level_' + this.level })
 		this.map.addTilesetImage('tileset', 'tiles')
-		this.map.createLayer('Ground', 'tileset', 0, 0)
+		let ground = this.map.createLayer('Ground', 'tileset', 0, 0)
+		ground.setCollisionBetween(0, 100)
+		this.matter.world.convertTilemapLayer(ground)
 		let objectLayer = this.map.getObjectLayer('Objects')
 		this.ball = this.matter.add.sprite(0, 0, 'ball', 0, {
 			shape: {
@@ -37,11 +39,13 @@ export class Game extends Scene {
 		this.matter.world.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels)
 
 		this.cameras.main.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels)
+		this.cameras.main.startFollow(this.ball, true)
 
 		this.minusPole = this.add.sprite(0, 0, 'minus').setOrigin(0, 0).setZ(10)
 		this.plusPole = this.add.sprite(120, 0, 'plus').setOrigin(0, 0).setZ(10)
 	}
 	update(time: number, delta: number): void {
+		this.ball.setVelocityY(-0.5)
 		if (this.keys.left.isDown) {
 			this.minusPole.play('minus_on', true)
 			this.ball.setVelocityX(-FOCRE)
