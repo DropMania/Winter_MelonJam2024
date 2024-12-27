@@ -1,9 +1,4 @@
 {
-    "Map/SizeTest": {
-        "height": 4300,
-        "width": 2
-    },
-    "activeFile": "",
     "expandedProjectPaths": [
     ],
     "fileStates": {
@@ -11,17 +6,22 @@
             "scaleInDock": 1,
             "scaleInEditor": 8
         },
+        "Levels/Level_1.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 222.33333333333326,
+                "y": 2790.6666666666665
+            }
+        },
+        "Levels/Level_1.tmx#tileset": {
+            "scaleInDock": 1
+        },
         "tileset.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 5.5
         }
     },
-    "last.externalTilesetPath": "C:/Users/robin/Desktop/projects/Winter_MelonJam2024/public/assets/tiled",
     "openFiles": [
-    ],
-    "project": "project.tiled-project",
-    "recentFiles": [
-        "tileset.tsx"
-    ],
-    "tileset.lastUsedFilter": "Tiled-Kachelsatzdateien (*.tsx *.xml)"
+    ]
 }
