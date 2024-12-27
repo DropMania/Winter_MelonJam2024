@@ -12,17 +12,16 @@ const config: Types.Core.GameConfig = {
 	backgroundColor: '#000',
 	pixelArt: true,
 	physics: {
-		default: 'arcade',
-		arcade: {
+		default: 'matter',
+		/* arcade: {
 			gravity: { y: 0, x: 0 },
 
 			debug: true,
-		},
-		/* matter: {
-			gravity: { y: 0, x: 0 },
-			debug: true,
-
 		}, */
+		matter: {
+			gravity: { y: 0, x: 0 },
+			debug: false,
+		},
 	},
 	scale: {
 		mode: Scale.FIT,

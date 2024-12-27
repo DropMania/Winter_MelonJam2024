@@ -32,7 +32,7 @@
         {
          "draworder":"topdown",
          "id":2,
-         "name":"Spawn",
+         "name":"Objects",
          "objects":[
                 {
                  "height":0,
@@ -62,19 +62,6 @@
         {
          "columns":8,
          "firstgid":1,
-         "image":"..\/..\/img\/tileset.png",
-         "imageheight":128,
-         "imagewidth":128,
-         "margin":0,
-         "name":"tileset",
-         "spacing":0,
-         "tilecount":64,
-         "tileheight":16,
-         "tilewidth":16
-        }, 
-        {
-         "columns":8,
-         "firstgid":65,
          "image":"..\/..\/img\/tileset.png",
          "imageheight":128,
          "imagewidth":128,

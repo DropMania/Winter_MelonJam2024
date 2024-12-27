@@ -3,6 +3,7 @@ import { Scene } from 'phaser'
 export class Loading extends Scene {
 	poles = ['minus', 'plus']
 	sprites = ['ball']
+	levels = ['Level_1']
 	constructor() {
 		super('Loading')
 	}
@@ -15,6 +16,10 @@ export class Loading extends Scene {
 		this.sprites.forEach((sprite) => {
 			this.load.aseprite(sprite, `sprites/${sprite}.png`, `sprites/${sprite}.json`)
 		})
+		this.load.image('tiles', 'img/tileset.png')
+		this.levels.forEach((level) => {
+			this.load.tilemapTiledJSON(level, `tiled/Levels/${level}.json`)
+		})
 	}
 
 	create() {
@@ -24,6 +29,6 @@ export class Loading extends Scene {
 		this.sprites.forEach((sprite) => {
 			this.anims.createFromAseprite(sprite)
 		})
-		this.scene.start('Game')
+		this.scene.start('Game', { level: 1 })
 	}
 }
